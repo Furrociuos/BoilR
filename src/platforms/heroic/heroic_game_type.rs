@@ -59,7 +59,7 @@ impl From<HeroicGameType> for ShortcutOwned {
                             "run com.heroicgameslauncher.hgl {launch_parameter} --no-gui --no-sandbox"
                         ),
                     ),
-                    InstallationMode::UserBin => ("heroic", launch_parameter),
+                    InstallationMode::UserBin => ("heroic --no-gui --no-sandbox", launch_parameter),
                 };
                 Shortcut::new("0", title.as_str(), exe, "", "", "", parameter.as_str()).to_owned()
             }
